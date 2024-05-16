@@ -154,6 +154,10 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Indentation space
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = k
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -244,6 +248,9 @@ require('lazy').setup({
 
   -- NeoScroll for smooth scrolling
   { 'karb94/neoscroll.nvim', opts = {} },
+
+  -- oil
+  { 'stevearc/oil.nvim', opts = { vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' }) } },
 
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
