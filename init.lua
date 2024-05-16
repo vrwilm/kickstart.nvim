@@ -189,8 +189,8 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-vim.keymap.set({ 'i' }, '<C-s>', '<C-o>:w<ENTER>', { desc = 'Save with control-s' })
-vim.keymap.set({ 'n' }, '<C-s>', ':w<ENTER>', { desc = 'Save with control-s' })
+vim.keymap.set({ 'i' }, '<C-s>', '<C-o>:w<ENTER><ESC>', { desc = 'Save with control-s' })
+vim.keymap.set({ 'n' }, '<C-s>', ':w<ENTER><ESC>', { desc = 'Save with control-s' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -572,7 +572,7 @@ require('lazy').setup({
       local servers = {
         basedpyright = {},
         -- clangd = {},
-        -- gopls = {},
+        gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -660,7 +660,7 @@ require('lazy').setup({
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
         python = { 'black' },
-        go = { 'goimports', 'gofumpt' },
+        -- go = { 'goimports', 'gofumpt' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
