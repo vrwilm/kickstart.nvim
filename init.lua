@@ -156,7 +156,7 @@ vim.opt.scrolloff = 10
 
 -- Indentation space
 vim.opt.tabstop = 2
-vim.opt.shiftwidth = k
+vim.opt.shiftwidth = 2
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
